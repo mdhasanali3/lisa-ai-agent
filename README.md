@@ -188,3 +188,11 @@ lisa-ai-agent-private/
 - Chat interface building
 - Research about Life insurance
 - Create a knowledge base with Chatgpt
+
+## Evaluation criteria covered
+- Handles life insurance queries accurately and
+contextually (**50%**)
+- Clean and readable code, modular, and scalable
+design (**30%**)
+- Clear setup guide and inline documentation (**10%**)
+- Responsive and intuitive chat/voice interface (**5%**) covered only chat interface
