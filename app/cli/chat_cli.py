@@ -9,7 +9,7 @@ from rich.prompt import Prompt
 from dotenv import load_dotenv
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 
-from src.agent.insurance_agent import LifeInsuranceAgent
+from app.agent.insurance_agent import LifeInsuranceAgent
 
 load_dotenv()
 
@@ -130,7 +130,7 @@ Type your question or use these commands:
             console.print("See .env.example for reference.\n")
             sys.exit(1)
 
-    
+
         if not self.initialize_agent():
             sys.exit(1)
 

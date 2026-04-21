@@ -6,7 +6,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_openai import OpenAIEmbeddings
 from langchain_core.documents import Document
 
-from src.knowledge_base.insurance_data import get_knowledge_base
+from app.knowledge_base.insurance_data import get_knowledge_base
 
 
 class InsuranceVectorStore:

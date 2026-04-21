@@ -5,14 +5,14 @@ from langgraph.graph import StateGraph, END
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage, SystemMessage
 
-from src.vector_store.faiss_store import InsuranceVectorStore
+from app.vector_store.faiss_store import InsuranceVectorStore
 
 
 class AgentState(TypedDict):
     """State definition for the insurance agent workflow."""
     messages: Annotated[Sequence[BaseMessage], add]  # Conversation history
-    context: str  
-    user_query: str  
+    context: str
+    user_query: str
 
 
 class LifeInsuranceAgent:

@@ -43,13 +43,15 @@ OPENAI_API_KEY=your_api_key_here
 ### 3. Run CLI
 
 ```bash
-python -m src.cli.chat_cli
+python -m app.cli.chat_cli
 ```
 
 ### 4. Run API Server
 
 ```bash
-python -m src.api.server
+ uvicorn main:app 
+ or
+ python main.py
 ```
 
 API will be available at `http://localhost:8000`

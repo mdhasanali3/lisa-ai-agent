@@ -8,7 +8,7 @@ from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, AIMessage, BaseMessage
 
-from src.agent.insurance_agent import LifeInsuranceAgent
+from app.agent.insurance_agent import LifeInsuranceAgent
 
 
 load_dotenv()
@@ -105,7 +105,7 @@ async def chat(request: ChatRequest):
         raise HTTPException(status_code=503, detail="Agent not initialized")
 
     try:
-    
+
         session_id = request.session_id
         conversation_history = sessions.get(session_id, [])
 
