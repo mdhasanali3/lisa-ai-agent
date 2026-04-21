@@ -107,11 +107,11 @@ Response + Updated Context
 
 ### Components
 
-- **`src/agent/insurance_agent.py`**: LangGraph workflow with RAG pipeline
-- **`src/vector_store/faiss_store.py`**: FAISS vector store management
-- **`src/knowledge_base/insurance_data.py`**: Life insurance domain knowledge
-- **`src/api/server.py`**: FastAPI REST endpoints
-- **`src/cli/chat_cli.py`**: Interactive CLI interface
+- **`app/agent/insurance_agent.py`**: LangGraph workflow with RAG pipeline
+- **`app/vector_store/faiss_store.py`**: FAISS vector store management
+- **`app/knowledge_base/insurance_data.py`**: Life insurance domain knowledge
+- **`app/api/server.py`**: FastAPI REST endpoints
+- **`app/cli/chat_cli.py`**: Interactive CLI interface
 
 ### LangGraph Workflow
 
@@ -144,10 +144,10 @@ Environment variables in `.env`:
 
 ## Extending the Knowledge Base
 
-Edit `src/knowledge_base/insurance_data.py` and rebuild the vector store:
+Edit `app/knowledge_base/insurance_data.py` and rebuild the vector store:
 
 ```python
-from src.vector_store.faiss_store import InsuranceVectorStore
+from app.vector_store.faiss_store import InsuranceVectorStore
 
 store = InsuranceVectorStore()
 store.rebuild_store()
@@ -157,7 +157,7 @@ store.rebuild_store()
 
 ```
 lisa-ai-agent-private/
-├── src/
+├── app/
 │   ├── agent/
 │   │   └── insurance_agent.py       # LangGraph agent
 │   ├── vector_store/
@@ -170,6 +170,8 @@ lisa-ai-agent-private/
 │       └── chat_cli.py              # CLI interface
 ├── data/
 │   └── vector_store/                # FAISS index (auto-generated)
+├── diagrams/
+├── video/
 ├── requirements.txt
 ├── .env.example
 └── README.md
